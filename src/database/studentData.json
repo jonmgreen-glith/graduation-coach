@@ -1,0 +1,166 @@
+{
+    "student" : {
+        "Jeffrey" : {
+            "grade" : {
+                "9" :{
+                    "subject" : {
+                        "math" : {
+                            "courses" : ["algebra 1"]
+                        },
+                        "science" : {
+                            "courses" : ["Biology 1"]
+                        },
+                        "socialStudies" : {
+                            "courses" : ["honors history 1"]
+                        },
+                        "languageArts" : {
+                            "courses" : ["spanish 1"]
+                        },
+                        "electives" : {
+                            "courses" : []
+                        }
+                    }
+                },
+                "10" :{
+                    "subject" : {
+                        "math" : {
+                            "courses" : ["algebra 2"]
+                        },
+                        "science" : {
+                            "courses" : ["Biology 2"]
+                        },
+                        "socialStudies" : {
+                            "courses" : ["honors history 2"]
+                        },
+                        "languageArts" : {
+                            "courses" : ["spanish 2"]
+                        },
+                        "electives" : {
+                            "courses" : []
+                        }
+                    }
+                },
+                "11" :{
+                    "subject" : {
+                        "math" : {
+                            "courses" : []
+                        },
+                        "science" : {
+                            "courses" : []
+                        },
+                        "socialStudies" : {
+                            "courses" : []
+                        },
+                        "languageArts" : {
+                            "courses" : []
+                        },
+                        "electives" : {
+                            "courses" : []
+                        }
+                    }
+                },
+                "12" :{
+                    "subject" : {
+                        "math" : {
+                            "courses" : []
+                        },
+                        "science" : {
+                            "courses" : []
+                        },
+                        "socialStudies" : {
+                            "courses" : []
+                        },
+                        "languageArts" : {
+                            "courses" : []
+                        },
+                        "electives" : {
+                            "courses" : []
+                        }
+                    }
+                }
+            }
+
+        },
+        "Rich" : {
+            "grade" : {
+                "9" :{
+                    "subject" : {
+                        "math" : {
+                            "courses" : ["algebra 1"]
+                        },
+                        "science" : {
+                            "courses" : ["Biology 1"]
+                        },
+                        "socialStudies" : {
+                            "courses" : ["honors history 1"]
+                        },
+                        "languageArts" : {
+                            "courses" : ["spanish 1"]
+                        },
+                        "electives" : {
+                            "courses" : []
+                        }
+                    }
+                },
+                "10" :{
+                    "subject" : {
+                        "math" : {
+                            "courses" : []
+                        },
+                        "science" : {
+                            "courses" : []
+                        },
+                        "socialStudies" : {
+                            "courses" : []
+                        },
+                        "languageArts" : {
+                            "courses" : []
+                        },
+                        "electives" : {
+                            "courses" : []
+                        }
+                    }
+                },
+                "11" :{
+                    "subject" : {
+                        "math" : {
+                            "courses" : []
+                        },
+                        "science" : {
+                            "courses" : []
+                        },
+                        "socialStudies" : {
+                            "courses" : []
+                        },
+                        "languageArts" : {
+                            "courses" : []
+                        },
+                        "electives" : {
+                            "courses" : []
+                        }
+                    }
+                },
+                "12" :{
+                    "subject" : {
+                        "math" : {
+                            "courses" : []
+                        },
+                        "science" : {
+                            "courses" : []
+                        },
+                        "socialStudies" : {
+                            "courses" : []
+                        },
+                        "languageArts" : {
+                            "courses" : []
+                        },
+                        "electives" : {
+                            "courses" : []
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

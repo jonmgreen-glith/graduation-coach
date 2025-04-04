@@ -1,0 +1,32 @@
+{
+    "grade" : {
+        "9": {
+            "math" : 1,
+            "science" : 1,
+            "socialStudies" : 1,
+            "languageArts" : 1,
+            "electives": 1
+        },
+        "10": {
+            "math" : 1,
+            "science" : 1,
+            "socialStudies" : 1,
+            "languageArts" : 1,
+            "electives": 5
+        },
+        "11": {
+            "math" : 1,
+            "science" : 1,
+            "socialStudies" : 1,
+            "languageArts" : 1,
+            "electives": 5
+        },
+         "12": {
+            "math" : 1,
+            "science" : 1,
+            "socialStudies" : 1,
+            "languageArts" : 1,
+            "electives": 5
+        }
+    }
+}

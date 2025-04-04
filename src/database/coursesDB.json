@@ -1,0 +1,389 @@
+{
+  "subjects": [
+    {
+      "name": "Science",
+      "courses": [
+        {
+          "name": "Biology 1",
+          "prerequisites": {
+            "grade": 9,
+            "courses": []
+          },
+          "description": "Introduction to basic biological concepts.",
+          "credits": 1
+        },
+        {
+          "name": "Honors Biology 1",
+          "prerequisites": {
+            "grade": 9,
+            "courses": []
+          },
+          "description": "Accelerated study of biological concepts.",
+          "credits": 1
+        },
+        {
+          "name": "Chemistry 1",
+          "prerequisites": {
+            "grade": 10,
+            "courses": ["Biology 1"]
+          },
+          "description": "Fundamentals of chemical reactions.",
+          "credits": 1
+        },
+        {
+          "name": "Honors Chemistry 1",
+          "prerequisites": {
+            "grade": 10,
+            "courses": ["Honors Biology 1"]
+          },
+          "description": "Advanced study of chemical principles.",
+          "credits": 1
+        },
+        {
+          "name": "Physics 1",
+          "prerequisites": {
+            "grade": 11,
+            "courses": ["Chemistry 1"]
+          },
+          "description": "Introduction to motion and energy.",
+          "credits": 1
+        },
+        {
+          "name": "Honors Physics 1",
+          "prerequisites": {
+            "grade": 11,
+            "courses": ["Honors Chemistry 1"]
+          },
+          "description": "Rigorous study of physical laws.",
+          "credits": 1
+        },
+        {
+          "name": "Environmental Science",
+          "prerequisites": {
+            "grade": 12,
+            "courses": ["Physics 1"]
+          },
+          "description": "Study of environmental systems.",
+          "credits": 1
+        },
+        {
+          "name": "Honors Environmental Science",
+          "prerequisites": {
+            "grade": 12,
+            "courses": ["Honors Physics 1"]
+          },
+          "description": "Advanced environmental research.",
+          "credits": 1
+        }
+      ]
+    },
+    {
+      "name": "Math",
+      "courses": [
+        {
+          "name": "Algebra 1",
+          "prerequisites": {
+            "grade": 9,
+            "courses": []
+          },
+          "description": "Basic algebraic concepts and equations.",
+          "credits": 1
+        },
+        {
+          "name": "Honors Algebra 1",
+          "prerequisites": {
+            "grade": 9,
+            "courses": []
+          },
+          "description": "Advanced algebraic foundations.",
+          "credits": 1
+        },
+        {
+          "name": "Geometry",
+          "prerequisites": {
+            "grade": 10,
+            "courses": ["Algebra 1"]
+          },
+          "description": "Study of shapes and spatial relationships.",
+          "credits": 1
+        },
+        {
+          "name": "Honors Geometry",
+          "prerequisites": {
+            "grade": 10,
+            "courses": ["Honors Algebra 1"]
+          },
+          "description": "In-depth geometric proofs and theorems.",
+          "credits": 1
+        },
+        {
+          "name": "Algebra 2",
+          "prerequisites": {
+            "grade": 11,
+            "courses": ["Geometry"]
+          },
+          "description": "Advanced algebra and functions.",
+          "credits": 1
+        },
+        {
+          "name": "Honors Algebra 2",
+          "prerequisites": {
+            "grade": 11,
+            "courses": ["Honors Geometry"]
+          },
+          "description": "Complex algebraic systems.",
+          "credits": 1
+        },
+        {
+          "name": "Calculus",
+          "prerequisites": {
+            "grade": 12,
+            "courses": ["Algebra 2"]
+          },
+          "description": "Study of limits, derivatives, and integrals.",
+          "credits": 1
+        },
+        {
+          "name": "Honors Calculus",
+          "prerequisites": {
+            "grade": 12,
+            "courses": ["Honors Algebra 2"]
+          },
+          "description": "Advanced calculus with applications.",
+          "credits": 1
+        }
+      ]
+    },
+    {
+      "name": "Social Studies",
+      "courses": [
+        {
+          "name": "World History",
+          "prerequisites": {
+            "grade": 9,
+            "courses": []
+          },
+          "description": "Overview of global historical events.",
+          "credits": 1
+        },
+        {
+          "name": "Honors World History",
+          "prerequisites": {
+            "grade": 9,
+            "courses": []
+          },
+          "description": "Detailed analysis of world events.",
+          "credits": 1
+        },
+        {
+          "name": "U.S. History",
+          "prerequisites": {
+            "grade": 10,
+            "courses": ["World History"]
+          },
+          "description": "History of the United States.",
+          "credits": 1
+        },
+        {
+          "name": "Honors U.S. History",
+          "prerequisites": {
+            "grade": 10,
+            "courses": ["Honors World History"]
+          },
+          "description": "In-depth U.S. historical study.",
+          "credits": 1
+        },
+        {
+          "name": "Government",
+          "prerequisites": {
+            "grade": 11,
+            "courses": ["U.S. History"]
+          },
+          "description": "Structure and function of political systems.",
+          "credits": 1
+        },
+        {
+          "name": "Honors Government",
+          "prerequisites": {
+            "grade": 11,
+            "courses": ["Honors U.S. History"]
+          },
+          "description": "Advanced political theory.",
+          "credits": 1
+        },
+        {
+          "name": "Economics",
+          "prerequisites": {
+            "grade": 12,
+            "courses": ["Government"]
+          },
+          "description": "Principles of micro and macroeconomics.",
+          "credits": 1
+        },
+        {
+          "name": "Honors Economics",
+          "prerequisites": {
+            "grade": 12,
+            "courses": ["Honors Government"]
+          },
+          "description": "Advanced economic modeling.",
+          "credits": 1
+        }
+      ]
+    },
+    {
+      "name": "Language Arts",
+      "courses": [
+        {
+          "name": "English 1",
+          "prerequisites": {
+            "grade": 9,
+            "courses": []
+          },
+          "description": "Introduction to literature and writing.",
+          "credits": 1
+        },
+        {
+          "name": "Honors English 1",
+          "prerequisites": {
+            "grade": 9,
+            "courses": []
+          },
+          "description": "Advanced intro to literature and composition.",
+          "credits": 1
+        },
+        {
+          "name": "English 2",
+          "prerequisites": {
+            "grade": 10,
+            "courses": ["English 1"]
+          },
+          "description": "Advanced reading and composition.",
+          "credits": 1
+        },
+        {
+          "name": "Honors English 2",
+          "prerequisites": {
+            "grade": 10,
+            "courses": ["Honors English 1"]
+          },
+          "description": "Rigorous literary analysis and writing.",
+          "credits": 1
+        },
+        {
+          "name": "English 3",
+          "prerequisites": {
+            "grade": 11,
+            "courses": ["English 2"]
+          },
+          "description": "Study of American literature.",
+          "credits": 1
+        },
+        {
+          "name": "Honors English 3",
+          "prerequisites": {
+            "grade": 11,
+            "courses": ["Honors English 2"]
+          },
+          "description": "Advanced American literary studies.",
+          "credits": 1
+        },
+        {
+          "name": "English 4",
+          "prerequisites": {
+            "grade": 12,
+            "courses": ["English 3"]
+          },
+          "description": "World literature and advanced writing.",
+          "credits": 1
+        },
+        {
+          "name": "Honors English 4",
+          "prerequisites": {
+            "grade": 12,
+            "courses": ["Honors English 3"]
+          },
+          "description": "College-level literary analysis.",
+          "credits": 1
+        }
+      ]
+    },
+    {
+      "name": "Electives",
+      "courses": [
+        {
+          "name": "Programming 1",
+          "prerequisites": {
+            "grade": 9,
+            "courses": []
+          },
+          "description": "Basics of coding and logic.",
+          "credits": 1
+        },
+        {
+          "name": "Honors Programming 1",
+          "prerequisites": {
+            "grade": 9,
+            "courses": []
+          },
+          "description": "Advanced intro to programming.",
+          "credits": 1
+        },
+        {
+          "name": "Digital Art",
+          "prerequisites": {
+            "grade": 9,
+            "courses": []
+          },
+          "description": "Creating art using digital tools.",
+          "credits": 1
+        },
+        {
+          "name": "Honors Digital Art",
+          "prerequisites": {
+            "grade": 9,
+            "courses": []
+          },
+          "description": "Advanced digital art techniques.",
+          "credits": 1
+        },
+        {
+          "name": "Robotics",
+          "prerequisites": {
+            "grade": 9,
+            "courses": ["Programming 1"]
+          },
+          "description": "Building and programming robots.",
+          "credits": 1
+        },
+        {
+          "name": "Honors Robotics",
+          "prerequisites": {
+            "grade": 9,
+            "courses": ["Honors Programming 1"]
+          },
+          "description": "Advanced robotics engineering.",
+          "credits": 1
+        },
+        {
+          "name": "Music Theory",
+          "prerequisites": {
+            "grade": 9,
+            "courses": []
+          },
+          "description": "Fundamentals of musical composition.",
+          "credits": 1
+        },
+        {
+          "name": "Honors Music Theory",
+          "prerequisites": {
+            "grade": 9,
+            "courses": []
+          },
+          "description": "Advanced musical composition and analysis.",
+          "credits": 1
+        }
+      ]
+    }
+  ]
+}
