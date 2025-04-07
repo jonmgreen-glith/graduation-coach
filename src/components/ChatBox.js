@@ -1,84 +1,47 @@
-import React, { useState, useEffect } from 'react';
-// import { pipeline, env } from '@huggingface/transformers';
-
-
+import React, { useState } from 'react';
 
 function ChatBox() {
-
-  // useEffect(() => {
-  //   async function runGenerator() {
-  //     try {
-  //       // Enable local model loading
-  //       env.allowLocalModels = true;
-
-  //       // Verify file access
-  //       const tokenizerResponse = await fetch('/models/tokenizer.json');
-  //       const modelResponse = await fetch('/models/onnx/model.onnx');
-
-  //       console.log("Model:", modelResponse.status, modelResponse.ok);
-
-  //       if (!tokenizerResponse.ok || !modelResponse.ok) {
-  //         throw new Error("Files not accessible");
-  //       }
-
-  //       console.log("Files confirmed - loading pipeline...");
-
-  //       // Load pipeline without forcing local_files_only
-  //       const generator = await pipeline("text-generation", "/models");
-
-  //       console.log("Pipeline loaded successfully");
-
-  //       const messages = [
-  //         { role: "system", content: "You are a friendly assistant." },
-  //         { role: "user", content: "Please explain thermodynamics in less than 100 words." },
-  //       ];
-  //       const output = await generator(messages, { max_new_tokens: 512 });
-  //       console.log(output[0].generated_text.at(-1).content);
-  //     } catch (error) {
-  //       console.error("Error:", error.message, error.stack);
-  //     }
-  //   }
-
-  //   runGenerator();
-  // }, []); // Empty dependency array so it only runs once on mount
-
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleSend = () => {
-    if (input.trim()) {
-      setMessages([...messages, { text: input, sender: 'user' }]);
-      setInput('');
-      setTimeout(() => {
-        setMessages(prev => [...prev, { text: 'Hello! How can I help?', sender: 'bot' }]);
-      }, 1000);
-    }
+  const getChatReply = async (userInput) => {
+    let prompt = '<|system|>You are graduation coach helping a student pick their next semester courses.';
+    messages.forEach(msg => {
+      prompt += msg.sender === 'user' ? `<|user|>${msg.text}` : `<|assistant|>${msg.text}`;
+    });
+    prompt += `<|user|>${userInput}`;
+
+    const response = await fetch('http://44.223.26.195:11434/api/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model: 'tinyllama', prompt, stream: false })
+    });
+    const data = await response.json();
+    return data.response;
+  };
+
+  const handleSend = async () => {
+    if (!input.trim()) return;
+
+    const userMsg = { text: input, sender: 'user' };
+    setMessages(prev => [...prev, userMsg]);
+    setInput('');
+
+    const botReply = await getChatReply(input);
+    setMessages(prev => [...prev, { text: botReply, sender: 'bot' }]);
   };
 
   return (
-    <div style={{
-      position: 'fixed',
-      bottom: '20px',
-      right: '20px',
-      width: '300px',
-    }}>
+    <div style={{ position: 'fixed', bottom: '20px', right: '20px', width: '300px' }}>
       <button onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? 'Close Chat' : 'Open Chat'}
       </button>
       {isOpen && (
-        <div style={{
-          border: '1px solid #ccc',
-          height: '400px',
-          display: 'flex',
-          flexDirection: 'column',
-        }}>
+        <div style={{ border: '1px solid #ccc', height: '400px', display: 'flex', flexDirection: 'column' }}>
           <div style={{ flex: 1, overflowY: 'auto', padding: '10px' }}>
             {messages.map((msg, index) => (
-              <div key={index} style={{
-                textAlign: msg.sender === 'user' ? 'right' : 'left',
-                margin: '5px 0'
-              }}>
+              <div key={index} style={{ textAlign: msg.sender === 'user' ? 'right' : 'left', margin: '5px 0' }}>
                 <span style={{
                   background: msg.sender === 'user' ? '#007bff' : '#ccc',
                   color: msg.sender === 'user' ? 'white' : 'black',
@@ -96,7 +59,7 @@ function ChatBox() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              onKeyUp={(e) => e.key === 'Enter' && handleSend()}
+              onKeyPress={(e) => e.key === 'Enter' && handleSend()}
               style={{ width: '70%' }}
             />
             <button onClick={handleSend}>Send</button>
